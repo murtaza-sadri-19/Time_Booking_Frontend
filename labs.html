@@ -21,11 +21,12 @@
                     <li><a href="index.html#features">Features</a></li>
                     <li><a href="index.html#how">How It Works</a></li>
                     <li><a href="labs.html" class="active">Our Labs</a></li>
+                    <li><a href="about.html">About Us</a></li>
                     <li><a href="index.html#faq">FAQ</a></li>
                 </ul>
                 <div class="auth-buttons">
-                    <a href="#" class="btn btn-secondary">Login</a>
-                    <a href="#" class="btn">Sign Up</a>
+                    <a href="login.html" class="btn btn-secondary">Login</a>
+                    <a href="signup.html" class="btn">Sign Up</a>
                 </div>
                 <div class="hamburger" id="hamburger">
                     <div class="bar"></div>
@@ -95,6 +96,9 @@
             <span class="close-modal">&times;</span>
             <div class="modal-body" id="modalBody">
                 <!-- Lab details will be inserted here -->
+                <div class="modal-actions">
+                    <a href="booking.html" class="btn">Book This Lab</a>
+                </div>
             </div>
         </div>
     </div>
@@ -104,7 +108,10 @@
         <div class="container">
             <h2>Ready to Book Your Lab Time?</h2>
             <p>Join thousands of students and professionals using our labs across Madhya Pradesh</p>
-            <a href="#" class="btn">Book Now</a>
+            <div class="cta-buttons">
+                <a href="booking.html" class="btn">Book Now</a>
+                <a href="signup.html" class="btn btn-secondary">Create Account</a>
+            </div>
         </div>
     </section>
 
@@ -135,6 +142,14 @@
                         </ul>
                     </div>
                     <div class="footer-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
                         <h3>Connect</h3>
                         <ul class="social-links">
                             <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
@@ -152,5 +167,6 @@
 
     <script src="script.js"></script>
     <script src="labs.js"></script>
+    <script src="booking.js"></script>
 </body>
 </html>

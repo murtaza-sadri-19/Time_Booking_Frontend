@@ -57,64 +57,66 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Dynamic lab data
-    const labsData = [
-        {
-            name: "Central Coding Hub",
-            location: "Bhopal",
-            image: "/api/placeholder/400/200",
-            specs: ["30 Workstations", "High-Speed Internet", "24/7 Access"],
-            description: "Our flagship lab with state-of-the-art equipment and dedicated support staff."
-        },
-        {
-            name: "TechNest Lab",
-            location: "Indore",
-            image: "/api/placeholder/400/200",
-            specs: ["25 Workstations", "Specialized Hardware", "Group Rooms"],
-            description: "Perfect for collaborative projects with specialized hardware for graphics and AI development."
-        },
-        {
-            name: "CodeSpace",
-            location: "Jabalpur",
-            image: "/api/placeholder/400/200",
-            specs: ["20 Workstations", "Quiet Environment", "Technical Library"],
-            description: "A focused environment with additional resources for deep learning and research."
-        },
-        {
-            name: "Dev Studio",
-            location: "Gwalior",
-            image: "/api/placeholder/400/200",
-            specs: ["15 Workstations", "24/7 Access", "Meeting Rooms"],
-            description: "Flexible space with meeting rooms for team coordination and presentations."
-        }
-    ];
-    
-    // Populate labs section
+    // Dynamic lab data for labs.html page
     const labsGrid = document.getElementById('labsGrid');
     
-    labsData.forEach(lab => {
-        const labCard = document.createElement('div');
-        labCard.className = 'lab-card';
+    // Only populate labs section on labs.html page
+    if (labsGrid && window.location.pathname.includes('labs.html')) {
+        const labsData = [
+            {
+                name: "Central Coding Hub",
+                location: "Bhopal",
+                image: "lab1.png",
+                specs: ["30 Workstations", "High-Speed Internet", "24/7 Access"],
+                description: "Our flagship lab with state-of-the-art equipment and dedicated support staff."
+            },
+            {
+                name: "TechNest Lab",
+                location: "Indore",
+                image: "lab2.png",
+                specs: ["25 Workstations", "Specialized Hardware", "Group Rooms"],
+                description: "Perfect for collaborative projects with specialized hardware for graphics and AI development."
+            },
+            {
+                name: "CodeSpace",
+                location: "Jabalpur",
+                image: "lab3.png",
+                specs: ["20 Workstations", "Quiet Environment", "Technical Library"],
+                description: "A focused environment with additional resources for deep learning and research."
+            },
+            {
+                name: "Dev Studio",
+                location: "Gwalior",
+                image: "lab4.png",
+                specs: ["15 Workstations", "24/7 Access", "Meeting Rooms"],
+                description: "Flexible space with meeting rooms for team coordination and presentations."
+            }
+        ];
         
-        const labSpecs = lab.specs.map(spec => `<span>${spec}</span>`).join('');
-        
-        labCard.innerHTML = `
-            <img src="${lab.image}" alt="${lab.name}" class="lab-image">
-            <div class="lab-info">
-                <h3>${lab.name}</h3>
-                <div class="lab-location">
-                    <i class="fas fa-map-marker-alt"></i> ${lab.location}
+        labsData.forEach(lab => {
+            const labCard = document.createElement('div');
+            labCard.className = 'lab-card';
+            
+            const labSpecs = lab.specs.map(spec => `<span>${spec}</span>`).join('');
+            
+            labCard.innerHTML = `
+                <img src="${lab.image}" alt="${lab.name}" class="lab-image">
+                <div class="lab-info">
+                    <h3>${lab.name}</h3>
+                    <div class="lab-location">
+                        <i class="fas fa-map-marker-alt"></i> ${lab.location}
+                    </div>
+                    <div class="lab-specs">
+                        ${labSpecs}
+                    </div>
+                    <p>${lab.description}</p>
+                    <a href="#" class="btn btn-secondary">View Details</a>
                 </div>
-                <div class="lab-specs">
-                    ${labSpecs}
-                </div>
-                <p>${lab.description}</p>
-                <a href="#" class="btn btn-secondary">View Details</a>
-            </div>
-        `;
-        
-        labsGrid.appendChild(labCard);
-    });
+            `;
+            
+            labsGrid.appendChild(labCard);
+        });
+    }
     
     // Add animation to feature cards on scroll
     const featureCards = document.querySelectorAll('.feature-card');
