@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Lab | CodeLab Scheduler</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>CodeLab</span>Scheduler
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#how">How It Works</a></li>
+                    <li><a href="labs.html">Our Labs</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-secondary">Login</a>
+                    <a href="signup.html" class="btn">Sign Up</a>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Book a Lab</h2>
+                <p>Schedule your time at one of our state-of-the-art coding labs</p>
+            </div>
+            
+            <div class="booking-container">
+                <div class="booking-sidebar">
+                    <div class="filter-card">
+                        <h3>Filters</h3>
+                        <div class="filter-group">
+                            <label>Location</label>
+                            <select id="locationFilter">
+                                <option value="">All Locations</option>
+                                <option value="Bhopal">Bhopal</option>
+                                <option value="Indore">Indore</option>
+                                <option value="Jabalpur">Jabalpur</option>
+                                <option value="Gwalior">Gwalior</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Date</label>
+                            <input type="date" id="dateFilter" min="">
+                        </div>
+                        <div class="filter-group">
+                            <label>Lab Type</label>
+                            <div class="checkbox-group">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="generalLab" checked>
+                                    <label for="generalLab">General Purpose</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="aiLab" checked>
+                                    <label for="aiLab">AI/ML Lab</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="iotLab" checked>
+                                    <label for="iotLab">IoT Lab</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="booking-main">
+                    <div class="booking-tabs">
+                        <button class="tab-btn active" data-tab="labs">Select Lab</button>
+                        <button class="tab-btn" data-tab="time">Select Time</button>
+                        <button class="tab-btn" data-tab="confirm">Confirm</button>
+                    </div>
+                    
+                    <div class="tab-content active" id="labs-tab">
+                        <div class="labs-list" id="labsGrid">
+                            <!-- Lab cards will be dynamically inserted here -->
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="time-tab">
+                        <div class="time-selector">
+                            <div class="date-navigation">
+                                <button id="prevDate" class="btn btn-secondary"><i class="fas fa-chevron-left"></i></button>
+                                <h3 id="selectedDate">Today, April 4, 2025</h3>
+                                <button id="nextDate" class="btn btn-secondary"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                            
+                            <div class="time-slots">
+                                <div class="time-slot available">
+                                    <span class="time">9:00 AM - 11:00 AM</span>
+                                    <span class="availability">Available</span>
+                                </div>
+                                <div class="time-slot booked">
+                                    <span class="time">11:00 AM - 1:00 PM</span>
+                                    <span class="availability">Booked</span>
+                                </div>
+                                <div class="time-slot available">
+                                    <span class="time">1:00 PM - 3:00 PM</span>
+                                    <span class="availability">Available</span>
+                                </div>
+                                <div class="time-slot available">
+                                    <span class="time">3:00 PM - 5:00 PM</span>
+                                    <span class="availability">Available</span>
+                                </div>
+                                <div class="time-slot available">
+                                    <span class="time">5:00 PM - 7:00 PM</span>
+                                    <span class="availability">Available</span>
+                                </div>
+                                <div class="time-slot available">
+                                    <span class="time">7:00 PM - 9:00 PM</span>
+                                    <span class="availability">Available</span>
+                                </div>
+                            </div>
+                            <div class="time-slot-actions">
+                                <button id="selectTimeBtn" class="btn btn-secondary">Continue</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="confirm-tab">
+                        <div class="booking-summary">
+                            <h3>Booking Summary</h3>
+                            <div class="summary-info">
+                                <div class="summary-row">
+                                    <span>Lab:</span>
+                                    <span id="summaryLab">Central Coding Hub, Bhopal</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Date:</span>
+                                    <span id="summaryDate">April 4, 2025</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Time Slot:</span>
+                                    <span id="summaryTime">1:00 PM - 3:00 PM</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Duration:</span>
+                                    <span>2 hours</span>
+                                </div>
+                                <div class="summary-row total">
+                                    <span>Total:</span>
+                                    <span>₹0.00</span>
+                                </div>
+                            </div>
+                            <div class="booking-notice">
+                                <i class="fas fa-info-circle"></i>
+                                <p>Please arrive 15 minutes before your booking to set up your workstation. Cancellations are allowed up to 24 hours before your scheduled time.</p>
+                            </div>
+                            <div class="booking-actions">
+                                <button id="editBookingBtn" class="btn btn-secondary">Edit Booking</button>
+                                <button id="confirmBookingBtn" class="btn">Confirm Booking</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>CodeLab</span>Scheduler
+                    <p>Making coding labs accessible to everyone in Madhya Pradesh</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Product</h3>
+                        <ul>
+                            <li><a href="index.html#features">Features</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Updates</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Connect</h3>
+                        <ul class="social-links">
+                            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CodeLab Scheduler. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="booking.js"></script>
+</body>
+</html>
