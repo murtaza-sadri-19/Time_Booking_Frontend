@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeLab Scheduler | Madhya Pradesh Coding Labs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>CodeLab</span>Scheduler
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how">How It Works</a></li>
+                    <li><a href="#labs">Our Labs</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="#" class="btn btn-secondary">Login</a>
+                    <a href="#" class="btn">Sign Up</a>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Book Coding Lab Time with Ease</h1>
+                <p>Access state-of-the-art coding facilities across Madhya Pradesh. Schedule lab time, manage bookings, and focus on what matters—your code.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn">Get Started</a>
+                    <a href="#" class="btn btn-secondary">View Labs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Key Features</h2>
+                <p>Everything you need to manage and book lab time efficiently</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Easy Booking</h3>
+                    <p>Book lab time slots with just a few clicks. View availability in real-time and secure your spot instantly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Flexible Scheduling</h3>
+                    <p>Reschedule or cancel bookings up to 24 hours in advance without any penalties.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-clock"></i>
+                    </div>
+                    <h3>Waitlist System</h3>
+                    <p>Join waitlists for full time slots and get automatically notified when space becomes available.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Notifications</h3>
+                    <p>Receive timely reminders and updates about your bookings via email or SMS.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Secure Authentication</h3>
+                    <p>Protect your account with secure login options including two-factor authentication.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Friendly</h3>
+                    <p>Access all features on the go with our responsive mobile web application.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how">
+        <div class="container">
+            <div class="section-title">
+                <h2>How It Works</h2>
+                <p>Get started with CodeLab Scheduler in just three simple steps</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Create Account</h3>
+                    <p>Sign up using your email or student ID to create your personal account.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Find a Lab</h3>
+                    <p>Browse available labs, check equipment specs, and view real-time availability.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Book Time Slot</h3>
+                    <p>Select your preferred time slot and confirm your booking instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Labs Section -->
+    <section class="labs" id="labs">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Coding Labs</h2>
+                <p>State-of-the-art facilities across Madhya Pradesh</p>
+            </div>
+            <div class="labs-grid" id="labsGrid">
+                <!-- Lab cards will be dynamically inserted here via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about our lab booking system</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How far in advance can I book a lab?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can book labs up to 14 days in advance, depending on lab availability and your account status.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What if I need to cancel my booking?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Cancellations can be made up to 24 hours before your scheduled time without penalty. Late cancellations may affect your booking privileges.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How long can I book a lab for?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Standard bookings are available in 2-hour blocks, with a maximum of 6 hours per day depending on demand.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I bring guests to the lab?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Each lab has different policies. Some allow up to 2 guests per booking, while others are restricted to registered users only.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Start Coding?</h2>
+            <p>Join thousands of students and professionals using our labs across Madhya Pradesh</p>
+            <a href="#" class="btn">Create Your Account</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>CodeLab</span>Scheduler
+                    <p>Making coding labs accessible to everyone in Madhya Pradesh</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Product</h3>
+                        <ul>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Updates</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Connect</h3>
+                        <ul class="social-links">
+                            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CodeLab Scheduler. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
