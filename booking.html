@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book a Lab | CodeLab Scheduler</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="booking.css">
 </head>
 <body>
@@ -21,6 +22,7 @@
                     <li><a href="index.html#how">How It Works</a></li>
                     <li><a href="labs.html">Our Labs</a></li>
                     <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
                 </ul>
                 <div class="auth-buttons">
                     <a href="login.html" class="btn btn-secondary">Login</a>
@@ -35,144 +37,110 @@
         </div>
     </header>
 
-    <!-- Booking Section -->
+    <!-- Booking Banner -->
+    <section class="booking-banner">
+        <div class="container">
+            <h1>Book Your Lab Session</h1>
+            <p>Reserve your spot at one of our state-of-the-art coding labs</p>
+        </div>
+    </section>
+
+    <!-- Simplified Booking Section -->
     <section class="booking-section">
         <div class="container">
-            <div class="section-title">
-                <h2>Book a Lab</h2>
-                <p>Schedule your time at one of our state-of-the-art coding labs</p>
-            </div>
-            
-            <div class="booking-container">
-                <div class="booking-sidebar">
-                    <div class="filter-card">
-                        <h3>Filters</h3>
-                        <div class="filter-group">
-                            <label>Location</label>
-                            <select id="locationFilter">
-                                <option value="">All Locations</option>
-                                <option value="Bhopal">Bhopal</option>
-                                <option value="Indore">Indore</option>
-                                <option value="Jabalpur">Jabalpur</option>
-                                <option value="Gwalior">Gwalior</option>
-                            </select>
+            <div class="combined-booking-form">
+                <!-- Lab Selection -->
+                <div class="booking-panel">
+                    <h3>Select Lab</h3>
+                    <div class="form-group">
+                        <label for="labName">Lab Name</label>
+                        <input type="text" id="labName" name="labName" placeholder="Enter lab name" required>
+                    </div>
+                </div>
+                
+                <!-- Date/Time Selection -->
+                <div class="booking-panel">
+                    <h3>Choose Date & Time</h3>
+                    <div class="date-time-selector">
+                        <div class="calendar-container">
+                            <div class="calendar-header">
+                                <button id="prevMonth" class="calendar-nav"><i class="fas fa-chevron-left"></i></button>
+                                <h4 id="monthYearDisplay">April 2025</h4>
+                                <button id="nextMonth" class="calendar-nav"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                            <div class="calendar" id="bookingCalendar">
+                                <!-- Calendar will be dynamically generated here -->
+                            </div>
                         </div>
-                        <div class="filter-group">
-                            <label>Date</label>
-                            <input type="date" id="dateFilter" min="">
-                        </div>
-                        <div class="filter-group">
-                            <label>Lab Type</label>
-                            <div class="checkbox-group">
-                                <div class="checkbox">
-                                    <input type="checkbox" id="generalLab" checked>
-                                    <label for="generalLab">General Purpose</label>
-                                </div>
-                                <div class="checkbox">
-                                    <input type="checkbox" id="aiLab" checked>
-                                    <label for="aiLab">AI/ML Lab</label>
-                                </div>
-                                <div class="checkbox">
-                                    <input type="checkbox" id="iotLab" checked>
-                                    <label for="iotLab">IoT Lab</label>
-                                </div>
+                        
+                        <div class="time-slots">
+                            <h4>Available Time Slots <span id="selectedDateDisplay"></span></h4>
+                            <div class="time-slots-list" id="timeSlotsList">
+                                <!-- Time slots will be dynamically generated here -->
+                                <p class="select-date-message">Please select a date to view available time slots</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="booking-main">
-                    <div class="booking-tabs">
-                        <button class="tab-btn active" data-tab="labs">Select Lab</button>
-                        <button class="tab-btn" data-tab="time">Select Time</button>
-                        <button class="tab-btn" data-tab="confirm">Confirm</button>
-                    </div>
-                    
-                    <div class="tab-content active" id="labs-tab">
-                        <div class="labs-list" id="labsGrid">
-                            <!-- Lab cards will be dynamically inserted here -->
-                        </div>
-                    </div>
-                    
-                    <div class="tab-content" id="time-tab">
-                        <div class="time-selector">
-                            <div class="date-navigation">
-                                <button id="prevDate" class="btn btn-secondary"><i class="fas fa-chevron-left"></i></button>
-                                <h3 id="selectedDate">Today, April 4, 2025</h3>
-                                <button id="nextDate" class="btn btn-secondary"><i class="fas fa-chevron-right"></i></button>
+
+                <!-- Booking Confirmation -->
+                <div class="booking-panel">
+                    <div class="booking-summary">
+                        <h3>Booking Summary</h3>
+                        <div class="summary-details">
+                            <div class="summary-item">
+                                <span class="summary-label">Lab:</span>
+                                <span class="summary-value" id="summaryLabName">-</span>
                             </div>
-                            
-                            <div class="time-slots">
-                                <div class="time-slot available">
-                                    <span class="time">9:00 AM - 11:00 AM</span>
-                                    <span class="availability">Available</span>
-                                </div>
-                                <div class="time-slot booked">
-                                    <span class="time">11:00 AM - 1:00 PM</span>
-                                    <span class="availability">Booked</span>
-                                </div>
-                                <div class="time-slot available">
-                                    <span class="time">1:00 PM - 3:00 PM</span>
-                                    <span class="availability">Available</span>
-                                </div>
-                                <div class="time-slot available">
-                                    <span class="time">3:00 PM - 5:00 PM</span>
-                                    <span class="availability">Available</span>
-                                </div>
-                                <div class="time-slot available">
-                                    <span class="time">5:00 PM - 7:00 PM</span>
-                                    <span class="availability">Available</span>
-                                </div>
-                                <div class="time-slot available">
-                                    <span class="time">7:00 PM - 9:00 PM</span>
-                                    <span class="availability">Available</span>
-                                </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Date:</span>
+                                <span class="summary-value" id="summaryDate">-</span>
                             </div>
-                            <div class="time-slot-actions">
-                                <button id="selectTimeBtn" class="btn btn-secondary">Continue</button>
+                            <div class="summary-item">
+                                <span class="summary-label">Time:</span>
+                                <span class="summary-value" id="summaryTime">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Duration:</span>
+                                <span class="summary-value" id="summaryDuration">2 hours</span>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="tab-content" id="confirm-tab">
-                        <div class="booking-summary">
-                            <h3>Booking Summary</h3>
-                            <div class="summary-info">
-                                <div class="summary-row">
-                                    <span>Lab:</span>
-                                    <span id="summaryLab">Central Coding Hub, Bhopal</span>
-                                </div>
-                                <div class="summary-row">
-                                    <span>Date:</span>
-                                    <span id="summaryDate">April 4, 2025</span>
-                                </div>
-                                <div class="summary-row">
-                                    <span>Time Slot:</span>
-                                    <span id="summaryTime">1:00 PM - 3:00 PM</span>
-                                </div>
-                                <div class="summary-row">
-                                    <span>Duration:</span>
-                                    <span>2 hours</span>
-                                </div>
-                                <div class="summary-row total">
-                                    <span>Total:</span>
-                                    <span>₹0.00</span>
-                                </div>
-                            </div>
-                            <div class="booking-notice">
-                                <i class="fas fa-info-circle"></i>
-                                <p>Please arrive 15 minutes before your booking to set up your workstation. Cancellations are allowed up to 24 hours before your scheduled time.</p>
-                            </div>
-                            <div class="booking-actions">
-                                <button id="editBookingBtn" class="btn btn-secondary">Edit Booking</button>
-                                <button id="confirmBookingBtn" class="btn">Confirm Booking</button>
-                            </div>
-                        </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="termsAgree" name="termsAgree" required>
+                        <label for="termsAgree">I agree to the <a href="#">Terms and Conditions</a></label>
+                    </div>
+                    
+                    <div class="booking-actions">
+                        <a href="labs.html" class="btn btn-secondary">Back to Labs</a>
+                        <button class="btn" id="confirmBookingBtn">Confirm Booking</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Booking Confirmation Modal -->
+    <div class="modal" id="bookingConfirmationModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="confirmation-content">
+                <i class="fas fa-check-circle success-icon"></i>
+                <h2>Booking Confirmed!</h2>
+                <p>Your lab booking has been successfully confirmed.</p>
+                <div class="confirmation-details">
+                    <p><strong>Booking ID:</strong> <span id="confirmationId">MP-CL-2025042501</span></p>
+                    <p><strong>Lab:</strong> <span id="confirmationLab">-</span></p>
+                    <p><strong>Date & Time:</strong> <span id="confirmationDateTime">-</span></p>
+                </div>
+                <div class="confirmation-actions">
+                    <a href="index.html" class="btn btn-secondary">Return to Home</a>
+                    <a href="#" class="btn" id="viewBookingsBtn">View My Bookings</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -201,6 +169,14 @@
                         </ul>
                     </div>
                     <div class="footer-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
                         <h3>Connect</h3>
                         <ul class="social-links">
                             <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
@@ -216,6 +192,8 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
+    <script src="labs.js"></script>
     <script src="booking.js"></script>
 </body>
 </html>
