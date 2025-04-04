@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Labs | CodeLab Scheduler</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="labs.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>CodeLab</span>Scheduler
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#how">How It Works</a></li>
+                    <li><a href="labs.html" class="active">Our Labs</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="#" class="btn btn-secondary">Login</a>
+                    <a href="#" class="btn">Sign Up</a>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Labs Banner -->
+    <section class="labs-banner">
+        <div class="container">
+            <h1>Our Coding Labs</h1>
+            <p>State-of-the-art facilities across Madhya Pradesh</p>
+        </div>
+    </section>
+
+    <!-- Lab Filter Section -->
+    <section class="lab-filters">
+        <div class="container">
+            <div class="filter-wrapper">
+                <div class="filter-group">
+                    <label for="locationFilter">Location</label>
+                    <select id="locationFilter" class="filter-select">
+                        <option value="all">All Locations</option>
+                        <option value="Bhopal">Bhopal</option>
+                        <option value="Indore">Indore</option>
+                        <option value="Jabalpur">Jabalpur</option>
+                        <option value="Gwalior">Gwalior</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="featureFilter">Features</label>
+                    <select id="featureFilter" class="filter-select">
+                        <option value="all">All Features</option>
+                        <option value="24/7 Access">24/7 Access</option>
+                        <option value="High-Speed Internet">High-Speed Internet</option>
+                        <option value="Meeting Rooms">Meeting Rooms</option>
+                        <option value="Specialized Hardware">Specialized Hardware</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sortBy">Sort By</label>
+                    <select id="sortBy" class="filter-select">
+                        <option value="name">Name</option>
+                        <option value="location">Location</option>
+                        <option value="capacity">Capacity</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Labs Grid Section -->
+    <section class="labs-section">
+        <div class="container">
+            <div class="labs-grid" id="labsGrid">
+                <!-- Lab cards will be dynamically inserted here via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Lab Detail Modal -->
+    <div class="lab-modal" id="labModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body" id="modalBody">
+                <!-- Lab details will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="labs-cta">
+        <div class="container">
+            <h2>Ready to Book Your Lab Time?</h2>
+            <p>Join thousands of students and professionals using our labs across Madhya Pradesh</p>
+            <a href="#" class="btn">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>CodeLab</span>Scheduler
+                    <p>Making coding labs accessible to everyone in Madhya Pradesh</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Product</h3>
+                        <ul>
+                            <li><a href="index.html#features">Features</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Updates</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Connect</h3>
+                        <ul class="social-links">
+                            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CodeLab Scheduler. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="labs.js"></script>
+</body>
+</html>
