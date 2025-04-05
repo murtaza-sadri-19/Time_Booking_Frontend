@@ -180,79 +180,54 @@ nav {
 
 /* About Hero Section */
 .about-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/about-hero.jpg');
+    background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(19, 25, 75, 0.8)), url('images/about-hero.jpg');
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 6rem 0;
+    padding: 4rem 0;
     text-align: center;
 }
 
 .about-hero h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
-    font-weight: 800;
 }
 
 .about-hero .subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .about-cta {
     margin-top: 2rem;
 }
 
-/* About Story Section */
-.about-story {
-    padding: 5rem 0;
-    background-color: var(--light-color);
-}
-
-.about-story-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-}
-
-.about-story-text p {
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-}
-
-.about-story-image {
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
 /* Team Section */
 .team-section {
-    padding: 5rem 0;
+    padding: 3rem 0;
+    background-color: #f9f9f9;
 }
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
 }
 
 .team-member {
     background-color: white;
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 1.5rem;
     text-align: center;
-    transition: all 0.3s ease;
 }
 
 .team-member:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .team-member-image {
@@ -267,17 +242,14 @@ nav {
 .team-member h3 {
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
-}
-
-.position {
-    color: var(--primary-color);
-    font-weight: 600;
-    margin-bottom: 1rem;
+    color: #333;
 }
 
 .team-member p {
     margin-bottom: 1.5rem;
     font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
 }
 
 .social-links {
@@ -297,15 +269,15 @@ nav {
 
 /* Partners Section */
 .partners-section {
-    background-color: var(--light-color);
-    padding: 5rem 0;
+    background-color: #f9f9f9;
+    padding: 3rem 0;
 }
 
 .partners-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .partner {
@@ -314,19 +286,20 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 5px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .partner:hover {
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Contact Section */
 .contact-section {
-    padding: 5rem 0;
+    padding: 3rem 0;
+    background-color: white;
 }
 
 .contact-grid {
@@ -338,6 +311,7 @@ nav {
 .contact-info h2 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
+    color: #333;
 }
 
 .contact-details {
@@ -364,16 +338,18 @@ nav {
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    font-weight: 600;
+    font-weight: 500;
+    color: #555;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 0.8rem;
+    padding: 0.75rem;
     border: 1px solid #ddd;
     border-radius: 4px;
-    font-family: var(--body-font);
+    font-size: 0.95rem;
+    background-color: white;
 }
 
 .form-group input:focus,
@@ -463,13 +439,8 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 992px) {
-    .about-story-content,
     .contact-grid {
         grid-template-columns: 1fr;
-    }
-    
-    .about-story-image {
-        order: -1;
     }
 }
 
@@ -518,15 +489,23 @@ footer {
     }
     
     .about-hero h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     
     .about-hero .subtitle {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     
     .section-header h2 {
         font-size: 2rem;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .footer-content {
@@ -536,15 +515,5 @@ footer {
     .footer-links {
         flex-direction: column;
         gap: 2rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .team-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .partners-grid {
-        grid-template-columns: repeat(2, 1fr);
     }
 }
