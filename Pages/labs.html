@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | CodeLab Scheduler</title>
+    <title>Our Labs | CodeLab Scheduler</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="../Styles/styles.css">
+    <link rel="stylesheet" href="../Styles/labs.css">
 </head>
 <body>
     <!-- Header -->
@@ -38,36 +39,71 @@
         </div>
     </header>
 
-    <!-- Login Form Section -->
-    <section class="auth-form-section">
+    <!-- Labs Banner -->
+    <section class="labs-banner">
         <div class="container">
-            <div class="auth-form-container">
-                <div class="auth-form-header">
-                    <h2>Welcome Back</h2>
-                    <p>Log into your CodeLab Scheduler account</p>
+            <h1>Our Coding Labs</h1>
+            <p>State-of-the-art facilities across Madhya Pradesh</p>
+        </div>
+    </section>
+
+    <!-- Lab Filter Section -->
+    <section class="lab-filters">
+        <div class="container">
+            <div class="filter-wrapper">
+                <div class="filter-group">
+                    <label for="locationFilter">Location</label>
+                    <select id="locationFilter" class="filter-select">
+                        <option value="all">All Locations</option>
+                        <option value="Bhopal">Bhopal</option>
+                        <option value="Indore">Indore</option>
+                        <option value="Jabalpur">Jabalpur</option>
+                        <option value="Gwalior">Gwalior</option>
+                    </select>
                 </div>
-                <form class="auth-form" id="loginForm">
-                    <div class="form-group">
-                        <label for="loginEmail">Email Address</label>
-                        <input type="email" id="loginEmail" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="loginPassword">Password</label>
-                        <input type="password" id="loginPassword" name="password" required>
-                        <small><a href="#" class="forgot-password">Forgot Password?</a></small>
-                    </div>
-                    <div class="form-group checkbox">
-                        <input type="checkbox" id="rememberMe" name="rememberMe">
-                        <label for="rememberMe">Remember me</label>
-                    </div>
-                    <button type="submit" class="btn auth-btn">Log In</button>
-                </form>
-                <div class="auth-form-footer">
-                    <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+                <div class="filter-group">
+                    <label for="featureFilter">Features</label>
+                    <select id="featureFilter" class="filter-select">
+                        <option value="all">All Features</option>
+                        <option value="24/7 Access">24/7 Access</option>
+                        <option value="High-Speed Internet">High-Speed Internet</option>
+                        <option value="Meeting Rooms">Meeting Rooms</option>
+                        <option value="Specialized Hardware">Specialized Hardware</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sortBy">Sort By</label>
+                    <select id="sortBy" class="filter-select">
+                        <option value="name">Name</option>
+                        <option value="location">Location</option>
+                        <option value="capacity">Capacity</option>
+                    </select>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Labs Grid Section -->
+    <section class="labs-section">
+        <div class="container">
+            <div class="labs-grid" id="labsGrid">
+                <!-- Lab cards will be dynamically inserted here via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Lab Detail Modal -->
+    <div class="lab-modal" id="labModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body" id="modalBody">
+                <!-- Lab details will be inserted here -->
+                <div class="modal-actions">
+                    <a href="booking.html" class="btn" id="bookFromModalBtn" target="_blank">Book This Lab</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -118,7 +154,13 @@
         </div>
     </footer>
 
+<<<<<<< HEAD:labs.html
 
-    <script src="login.js"></script>
+    <script src="script.js"></script>
+    <script src="labs.js"></script>
+=======
+    <script src="/Javascript/script.js"></script>
+    <script src="/Javascript/labs.js"></script>
+>>>>>>> 2403ae2698b0fb62b40616d2c60819dc4dc89431:Pages/labs.html
 </body>
 </html>
