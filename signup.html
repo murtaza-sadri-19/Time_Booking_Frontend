@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Labs | CodeLab Scheduler</title>
+    <title>Sign Up | CodeLab Scheduler</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../Styles/styles.css">
-    <link rel="stylesheet" href="../Styles/labs.css">
+    <link rel="stylesheet" href="signup.css">
 </head>
 <body>
     <!-- Header -->
@@ -39,71 +38,44 @@
         </div>
     </header>
 
-    <!-- Labs Banner -->
-    <section class="labs-banner">
+    <!-- Signup Form Section -->
+    <section class="auth-form-section">
         <div class="container">
-            <h1>Our Coding Labs</h1>
-            <p>State-of-the-art facilities across Madhya Pradesh</p>
-        </div>
-    </section>
-
-    <!-- Lab Filter Section -->
-    <section class="lab-filters">
-        <div class="container">
-            <div class="filter-wrapper">
-                <div class="filter-group">
-                    <label for="locationFilter">Location</label>
-                    <select id="locationFilter" class="filter-select">
-                        <option value="all">All Locations</option>
-                        <option value="Bhopal">Bhopal</option>
-                        <option value="Indore">Indore</option>
-                        <option value="Jabalpur">Jabalpur</option>
-                        <option value="Gwalior">Gwalior</option>
-                    </select>
+            <div class="auth-form-container">
+                <div class="auth-form-header">
+                    <h2>Create Your Account</h2>
+                    <p>Join our community of coders across Madhya Pradesh</p>
                 </div>
-                <div class="filter-group">
-                    <label for="featureFilter">Features</label>
-                    <select id="featureFilter" class="filter-select">
-                        <option value="all">All Features</option>
-                        <option value="24/7 Access">24/7 Access</option>
-                        <option value="High-Speed Internet">High-Speed Internet</option>
-                        <option value="Meeting Rooms">Meeting Rooms</option>
-                        <option value="Specialized Hardware">Specialized Hardware</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label for="sortBy">Sort By</label>
-                    <select id="sortBy" class="filter-select">
-                        <option value="name">Name</option>
-                        <option value="location">Location</option>
-                        <option value="capacity">Capacity</option>
-                    </select>
+                <form class="auth-form" id="signupForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                        <small>Must be at least 8 characters with numbers and special characters</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    </div>
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                    </div>
+                    <button type="submit" class="btn auth-btn">Create Account</button>
+                </form>
+                <div class="auth-form-footer">
+                    <p>Already have an account? <a href="login.html">Log in here</a></p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Labs Grid Section -->
-    <section class="labs-section">
-        <div class="container">
-            <div class="labs-grid" id="labsGrid">
-                <!-- Lab cards will be dynamically inserted here via JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Lab Detail Modal -->
-    <div class="lab-modal" id="labModal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="modal-body" id="modalBody">
-                <!-- Lab details will be inserted here -->
-                <div class="modal-actions">
-                    <a href="booking.html" class="btn" id="bookFromModalBtn" target="_blank">Book This Lab</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Footer -->
     <footer>
@@ -154,7 +126,11 @@
         </div>
     </footer>
 
-    <script src="/Javascript/script.js"></script>
-    <script src="/Javascript/labs.js"></script>
+<<<<<<< HEAD:signup.html
+
+    <script src="signup.js"></script>
+=======
+    <script src="/signup.js"></script>
+>>>>>>> 2403ae2698b0fb62b40616d2c60819dc4dc89431:Pages/signup.html
 </body>
 </html>
