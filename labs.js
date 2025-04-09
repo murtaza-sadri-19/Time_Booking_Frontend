@@ -9,7 +9,7 @@ const labsData = [
         features: ["High-Speed Internet", "24/7 Access", "Meeting Rooms"],
         description: "A modern coding space with high-speed connectivity and collaboration areas.",
         equipment: "Dual monitor setup, ergonomic chairs, high-performance workstations",
-        image: "../images/indore1.jpeg",
+        image: "images/indore1.jpeg",
         availability: "Monday-Sunday, 24 hours"
     },
     {
@@ -21,7 +21,7 @@ const labsData = [
         features: ["High-Speed Internet", "Meeting Rooms", "Specialized Hardware"],
         description: "A specialized lab with advanced hardware for machine learning and AI projects.",
         equipment: "GPU workstations, VR equipment, presentation screens",
-        image: "../images/bhopal1.jpeg",
+        image: "images/bhopal1.jpeg",
         availability: "Monday-Saturday, 8am-10pm"
     },
     {
@@ -33,7 +33,7 @@ const labsData = [
         features: ["High-Speed Internet", "24/7 Access"],
         description: "A cozy space perfect for focused coding and small team collaborations.",
         equipment: "Ergonomic workstations, collaboration boards, high-speed WiFi",
-        image: "../images/jabalpur1.jpeg",
+        image: "images/jabalpur1.jpeg",
         availability: "Monday-Sunday, 24 hours"
     },
     {
@@ -45,7 +45,7 @@ const labsData = [
         features: ["High-Speed Internet", "Meeting Rooms"],
         description: "A vibrant coding space with focus on educational workshops and group learning.",
         equipment: "Teaching displays, workstations, learning materials",
-        image: "../images/gwalior1.jpeg",
+        image: "images/gwalior1.jpeg",
         availability: "Monday-Friday, 9am-9pm"
     },
     {
@@ -57,7 +57,7 @@ const labsData = [
         features: ["High-Speed Internet", "24/7 Access", "Meeting Rooms", "Specialized Hardware"],
         description: "Our flagship lab with all premium features and equipments for any coding need.",
         equipment: "Latest Mac and Windows workstations, specialized hardware for IoT and ML",
-        image: "../images/bhopal2.jpeg",
+        image: "images/bhopal2.jpeg",
         availability: "Monday-Sunday, 24 hours"
     },
     {
@@ -69,7 +69,7 @@ const labsData = [
         features: ["High-Speed Internet", "Specialized Hardware"],
         description: "A specialized lab focusing on hardware integration and embedded systems.",
         equipment: "Soldering stations, microcontrollers, IoT kits, workstations",
-        image: "../images/indore2.jpeg",
+        image: "images/indore2.jpeg",
         availability: "Monday-Saturday, 10am-8pm"
     }
 ];
